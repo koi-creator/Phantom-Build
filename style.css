@@ -1,96 +1,122 @@
+/* ========== PHANTOM BUILD - MAIN STYLESHEET ========== */
+/* Author: Phantom Build
+   Date: 2025
+   Description: Custom CSS for Phantom Build website
+*/
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #0a0a0a;
-  color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
-header {
-  background-color: #1f1f1f;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 3px solid #00b8ff; /* neon blue accent */
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 20px 0 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-size: 1.1em;
-  font-weight: 500;
-  padding: 5px 10px;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #00b8ff;
-}
-
-nav ul li a.active {
-  color: #00b8ff;
-  border-bottom: 2px solid #00b8ff;
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 h1 {
-  color: #00b8ff;
-  font-size: 2.5em;
-  margin: 0;
+    color: #00b8ff;
+    font-size: 2.5em;
 }
 
+h2 {
+    color: #00b8ff;
+    font-size: 2em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #00b8ff;
+}
+
+header p {
+    color: #ccc;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00b8ff;
+}
+
+nav ul li a.active {
+    color: #00b8ff;
+    border-bottom: 2px solid #00b8ff;
+}
+
+/* ===== MAIN CONTAINER ===== */
 .container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
-.intro {
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-
+/* ===== BUTTONS ===== */
 .btn {
-  display: inline-block;
-  background-color: #00b8ff;
-  color: #0a0a0a;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-wight: bold;
-  transition: background-color 0.3s;
+    display: inline-block;
+    background-color: #00b8ff;
+    color: #0a0a0a;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #0099cc;
+    background-color: #0099cc;
+    transform: translateY(-2px);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1f1f1f;
-  border-top: 1px solid #333;
-  margin-top: 40px;
-}
-  
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+.btn:active {
+    transform: translateY(0);
 }
 
+/* ===== PACKAGES PAGE STYLES ===== */
+/* Packages Grid Layout */
 .packages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -98,6 +124,7 @@ footer {
     margin: 40px 0;
 }
 
+/* Individual Package Card */
 .package-card {
     background-color: #1a1a1a;
     border-radius: 10px;
@@ -114,6 +141,7 @@ footer {
     border-color: #00b8ff;
 }
 
+/* ENDGAME Watermark */
 .package-card::before {
     content: "ENDGAME";
     position: absolute;
@@ -129,6 +157,7 @@ footer {
     z-index: 1;
 }
 
+/* Package Header */
 .package-header {
     border-bottom: 2px solid #333;
     padding-bottom: 15px;
@@ -147,6 +176,7 @@ footer {
     display: block;
 }
 
+/* Pricing */
 .price {
     margin-top: 10px;
 }
@@ -164,6 +194,7 @@ footer {
     margin-left: 10px;
 }
 
+/* Package Specifications List */
 .package-specs ul {
     list-style: none;
     padding: 0;
@@ -187,6 +218,7 @@ footer {
     border-bottom: none;
 }
 
+/* Freebies Section */
 .package-free {
     background-color: #222;
     padding: 10px;
@@ -200,6 +232,7 @@ footer {
     color: #00b8ff;
 }
 
+/* Upgrades Section */
 .package-upgrades {
     background-color: #222;
     padding: 15px;
@@ -216,12 +249,14 @@ footer {
     margin: 0;
 }
 
+/* Package Button */
 .package-btn {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
 }
 
+/* Custom Quote Section */
 .custom-quote {
     text-align: center;
     background: linear-gradient(45deg, #1a1a1a, #222);
@@ -237,6 +272,7 @@ footer {
     margin-top: 0;
 }
 
+/* Intro Text */
 .intro-text {
     font-size: 1.1em;
     line-height: 1.8;
@@ -244,6 +280,99 @@ footer {
     margin-bottom: 20px;
 }
 
+/* ===== GALLERY PAGE STYLES ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 4 / 3;
+    background-color: #1f1f1f;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Gallery Overlay */
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.gallery-item .overlay span {
+    color: #00b8ff;
+    font-weight: bold;
+}
+
+/* ===== DISCLAIMER STYLES ===== */
+.disclaimer {
+    font-size: 0.8em;
+    color: #888;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+/* Social Media Links */
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #00b8ff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #0099cc;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Tablet Styles */
 @media (max-width: 768px) {
     .packages-grid {
         grid-template-columns: 1fr;
@@ -256,4 +385,86 @@ footer {
     .current {
         font-size: 1.4em;
     }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .disclaimer {
+        font-size: 0.7em;
+        margin-top: 30px;
+        padding-top: 15px;
+    }
 }
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .package-card {
+        padding: 15px;
+    }
+    
+    .custom-quote {
+        padding: 20px;
+    }
+    
+    .custom-quote h3 {
+        font-size: 1.5em;
+    }
+    
+    .social-links a {
+        font-size: 1.2em;
+        margin: 0 8px;
+    }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ===== FUTURE FEATURES PLACEHOLDERS ===== */
+/* These styles are for upcoming features */
+
+/* 404 Page Styles - To be implemented */
+.error-404-page {
+    /* Coming soon */
+}
+
+/* PC Builder Tool - Coming soon */
+.builder-tool {
+    /* Coming soon */
+}
+
+/* Comparison Page - Coming soon */
+.comparison-table {
+    /* Coming soon */
+}
+
+/* ========== END OF STYLESHEET ========== */
