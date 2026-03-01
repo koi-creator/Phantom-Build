@@ -56,18 +56,32 @@ p, li, .intro-text {
     font-weight: 400;
 }
 
-/* ===== HEADER & NAVIGATION - SOFT ===== */
+/* ===== HEADER WITH BOLD COMPLETE DOUBLE BORDER ===== */
 header {
+    border: 4px double #777;
     background-color: #141414;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
-    border-bottom: 1px solid #333333;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    margin: 20px 0;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border: 1px solid rgba(255,255,255,0.05);
+    pointer-events: none;
 }
 
 header p {
     color: #aaaaaa;
     font-size: 1em;
-    margin: 8px 0;
+    margin: 15px 0 10px;
     font-weight: 400;
 }
 
