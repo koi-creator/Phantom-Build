@@ -1,7 +1,7 @@
 /* ========== PHANTOM BUILD - MAIN STYLESHEET ========== */
 /* Author: Phantom Build
    Date: 2025
-   Description: Custom CSS for Phantom Build website - MANGA EDITION
+   Description: READABLE MANGA EDITION
 */
 
 /* ===== RESET & BASE STYLES ===== */
@@ -12,116 +12,96 @@
 }
 
 body {
-    font-family: 'Impact', 'Arial Black', 'Helvetica Bold', sans-serif;
+    font-family: 'Segoe UI', 'Arial', 'Helvetica', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000000;
     color: #ffffff;
     line-height: 1.6;
-    /* Manga screen tone effect */
-    background-image: 
-        radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 30px 30px;
+    /* Subtle manga texture - barely visible */
+    background-image: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
-/* ===== TYPOGRAPHY ===== */
+/* ===== TYPOGRAPHY - READABLE ===== */
 h1, h2, h3, h4 {
     margin-bottom: 15px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 700;
 }
 
 h1 {
     color: #ffffff;
-    font-size: 3.5em;
-    text-shadow: 4px 4px 0 #000000, 6px 6px 0 rgba(255, 255, 255, 0.3);
-    -webkit-text-stroke: 2px #ffffff;
-    text-stroke: 2px #ffffff;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     margin-bottom: 5px;
+    letter-spacing: 1px;
 }
 
 h2 {
     color: #ffffff;
-    font-size: 2.5em;
-    border-bottom: 4px solid #ffffff;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    display: inline-block;
-    text-transform: uppercase;
+    font-size: 2em;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+p, li, .intro-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #e0e0e0;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
 header {
-    background: #000000;
-    padding: 30px 20px;
+    background: #0a0a0a;
+    padding: 20px;
     text-align: center;
-    border-bottom: 4px solid #ffffff;
-    position: relative;
-}
-
-/* Manga speed lines effect */
-header::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: repeating-linear-gradient(45deg, 
-        #ffffff 0px, 
-        #ffffff 4px,
-        transparent 4px, 
-        transparent 8px);
-    opacity: 0.3;
+    border-bottom: 3px solid #ffffff;
 }
 
 header p {
     color: #cccccc;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 10px 0;
-    font-style: italic;
 }
 
-/* Navigation Bar - Manga style */
+/* Navigation Bar */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 20px 0 0 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    border-top: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    padding: 15px 0;
-}
-
-nav ul li {
-    display: inline;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 900;
-    padding: 5px 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 8px 16px;
     transition: all 0.2s ease;
-    text-transform: uppercase;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
 }
 
 nav ul li a:hover {
     background-color: #ffffff;
     color: #000000;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
 }
 
 nav ul li a.active {
     background-color: #ffffff;
     color: #000000;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
 }
 
 /* ===== MAIN CONTAINER ===== */
@@ -129,167 +109,97 @@ nav ul li a.active {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    border: 2px solid #ffffff;
-    position: relative;
 }
 
-/* Manga corner accents */
-.container::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 30px;
-    height: 30px;
-    border-top: 4px solid #ffffff;
-    border-left: 4px solid #ffffff;
-}
-
-.container::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 30px;
-    height: 30px;
-    border-bottom: 4px solid #ffffff;
-    border-right: 4px solid #ffffff;
-}
-
-/* ===== STYLISH BUTTONS - MANGA STYLE ===== */
+/* ===== STYLISH BUTTONS - READABLE ===== */
 .btn {
     display: inline-block;
     background: #000000;
     color: #ffffff;
-    padding: 15px 30px;
+    padding: 12px 24px;
     text-decoration: none;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 3px solid #ffffff;
+    font-weight: 600;
+    border: 2px solid #ffffff;
     transition: all 0.2s ease;
-    position: relative;
-    font-size: 1.1em;
-    box-shadow: 8px 8px 0 #ffffff;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .btn:hover {
     background: #ffffff;
     color: #000000;
-    transform: translate(-2px, -2px);
-    box-shadow: 12px 12px 0 #ffffff;
-}
-
-.btn:active {
-    transform: translate(4px, 4px);
-    box-shadow: 4px 4px 0 #ffffff;
 }
 
 /* ===== PACKAGES PAGE STYLES ===== */
-/* Packages Grid Layout */
 .packages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
     margin: 40px 0;
 }
 
-/* Individual Package Card - Manga Style */
 .package-card {
     background: #111111;
     padding: 25px;
-    border: 3px solid #ffffff;
+    border: 2px solid #ffffff;
     transition: all 0.2s ease;
-    position: relative;
-    box-shadow: 10px 10px 0 #ffffff;
 }
 
 .package-card:hover {
-    transform: translate(-5px, -5px);
-    box-shadow: 15px 15px 0 #ffffff;
+    transform: translateY(-5px);
+    border-color: #ffffff;
 }
 
-/* Manga speed lines on hover */
-.package-card:hover::after {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(45deg, 
-        transparent 0px, 
-        transparent 4px,
-        rgba(255, 255, 255, 0.1) 4px, 
-        rgba(255, 255, 255, 0.1) 8px);
-    pointer-events: none;
-    z-index: 5;
-}
-
-/* ENDGAME Watermark - Manga style */
+/* ENDGAME Watermark */
 .package-card::before {
-    content: "⚡ENDGAME⚡";
+    content: "ENDGAME";
     position: absolute;
-    top: 15px;
-    right: 15px;
-    color: #ffffff;
-    padding: 5px 15px;
+    top: 10px;
+    right: 10px;
+    color: rgba(255, 255, 255, 0.1);
     font-size: 0.8em;
-    font-weight: 900;
-    border: 2px solid #ffffff;
-    background: #000000;
-    opacity: 0.3;
+    font-weight: bold;
     z-index: 1;
-    transform: rotate(5deg);
 }
 
-/* Package Header */
 .package-header {
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 2px solid #333;
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
 .package-header h3 {
-    font-size: 2.5em;
+    font-size: 1.8em;
     margin: 0 0 5px 0;
     color: #ffffff;
-    -webkit-text-stroke: 1px #ffffff;
-    text-stroke: 1px #ffffff;
 }
 
 .package-header .series {
-    font-size: 0.6em;
-    color: #aaaaaa;
+    font-size: 0.5em;
+    color: #aaa;
     display: block;
-    font-style: italic;
 }
 
-/* Pricing - Manga style */
+/* Pricing */
 .price {
     margin-top: 15px;
     padding: 10px 0;
-    border-top: 2px dashed #ffffff;
-    border-bottom: 2px dashed #ffffff;
 }
 
 .current {
-    font-size: 2.2em;
-    font-weight: 900;
+    font-size: 1.8em;
+    font-weight: bold;
     color: #ffffff;
-    text-shadow: 3px 3px 0 #000000, 5px 5px 0 rgba(255, 255, 255, 0.3);
-    position: relative;
 }
 
 .original {
-    font-size: 1.2em;
-    color: #666;
+    font-size: 1em;
+    color: #888;
     text-decoration: line-through;
     margin-left: 10px;
-    opacity: 0.7;
 }
 
-/* Package Specifications List */
+/* Package Specifications - READABLE */
 .package-specs ul {
     list-style: none;
     padding: 0;
@@ -297,19 +207,18 @@ nav ul li a.active {
 }
 
 .package-specs li {
-    padding: 12px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #333;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: bold;
-    font-size: 1.1em;
+    color: #e0e0e0;
 }
 
 .package-specs li i {
     color: #ffffff;
-    width: 25px;
-    font-size: 1.2em;
+    width: 20px;
+    opacity: 0.8;
 }
 
 .package-specs li:last-child {
@@ -318,45 +227,25 @@ nav ul li a.active {
 
 /* Freebies Section */
 .package-free {
-    background-color: #000000;
-    padding: 15px;
+    background-color: #1a1a1a;
+    padding: 12px;
     margin: 20px 0;
     text-align: center;
-    border: 3px dashed #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.package-free i {
+    border: 1px dashed #ffffff;
     color: #ffffff;
-    margin-right: 5px;
 }
 
 /* Upgrades Section */
 .package-upgrades {
-    background-color: #111111;
+    background-color: #1a1a1a;
     padding: 15px;
     margin: 20px 0;
-    border: 2px solid #ffffff;
+    border: 1px solid #333;
 }
 
 .package-upgrades h4 {
     margin: 0 0 10px 0;
     color: #ffffff;
-    font-size: 1.3em;
-}
-
-.package-upgrades p {
-    margin: 0;
-    font-size: 1.1em;
-}
-
-/* Package Button */
-.package-btn {
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-    margin-top: 20px;
 }
 
 /* Custom Quote Section */
@@ -365,42 +254,37 @@ nav ul li a.active {
     background: #111111;
     padding: 40px;
     margin: 40px 0;
-    border: 4px solid #ffffff;
-    position: relative;
+    border: 2px solid #ffffff;
 }
 
 .custom-quote h3 {
     color: #ffffff;
-    font-size: 2.2em;
+    font-size: 2em;
     margin-top: 0;
-    text-transform: uppercase;
 }
 
 /* Intro Text */
 .intro-text {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.8;
-    color: #ffffff;
+    color: #e0e0e0;
     margin-bottom: 20px;
-    border-left: 4px solid #ffffff;
-    padding-left: 20px;
 }
 
 /* ===== GALLERY PAGE STYLES ===== */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     margin-top: 30px;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border: 3px solid #ffffff;
+    border: 2px solid #ffffff;
     aspect-ratio: 4 / 3;
-    background-color: #000000;
-    box-shadow: 8px 8px 0 #ffffff;
+    background-color: #1a1a1a;
 }
 
 .gallery-item img {
@@ -408,246 +292,111 @@ nav ul li a.active {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    display: block;
-    filter: grayscale(100%) contrast(120%);
+    filter: grayscale(100%);
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Gallery Overlay - Manga style */
 .gallery-item .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 20px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    border-top: 3px solid #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
+    padding: 15px;
+    text-align: center;
 }
 
-.gallery-item:hover .overlay {
-    transform: translateY(0);
-}
-
-.gallery-item .overlay span {
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 1.2em;
-}
-
-/* ===== DISCLAIMER STYLES ===== */
+/* ===== DISCLAIMER ===== */
 .disclaimer {
     font-size: 0.8em;
     color: #888;
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 20px;
     padding-top: 20px;
-    border-top: 2px solid #333;
-    font-style: italic;
-    line-height: 1.5;
+    border-top: 1px solid #333;
 }
 
-/* ===== FOOTER STYLES ===== */
+/* ===== FOOTER ===== */
 footer {
     text-align: center;
     padding: 30px;
-    background-color: #000000;
-    border-top: 4px solid #ffffff;
+    background-color: #0a0a0a;
+    border-top: 2px solid #ffffff;
     margin-top: 40px;
-}
-
-/* Social Media Links */
-.social-links {
-    margin-bottom: 15px;
 }
 
 .social-links a {
     color: #ffffff;
-    margin: 0 15px;
-    font-size: 2em;
+    margin: 0 10px;
+    font-size: 1.5em;
     transition: all 0.2s ease;
     display: inline-block;
-    border: 2px solid #ffffff;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 0;
 }
 
 .social-links a:hover {
-    background-color: #ffffff;
-    color: #000000;
-    transform: scale(1.1);
+    color: #cccccc;
 }
 
-/* ===== 404 PAGE STYLES - MANGA THEME ===== */
+/* ===== 404 PAGE ===== */
 .error-404-page {
-    min-height: 70vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background: #000000;
-    position: relative;
     margin: 40px 0;
-    border: 4px solid #ffffff;
-    overflow: hidden;
-}
-
-/* Manga speed lines */
-.error-404-page::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(45deg, 
-        transparent 0px, 
-        transparent 8px,
-        rgba(255, 255, 255, 0.03) 8px, 
-        rgba(255, 255, 255, 0.03) 16px);
-    pointer-events: none;
+    border: 2px solid #ffffff;
 }
 
 .error-container {
     max-width: 600px;
-    padding: 50px;
-    position: relative;
-    z-index: 2;
-    border: 3px solid #ffffff;
-    background: #0a0a0a;
+    padding: 40px;
 }
 
 .error-code {
-    font-size: 8em;
+    font-size: 6em;
     color: #ffffff;
     margin: 0;
     line-height: 1;
-    text-shadow: 8px 8px 0 #000000, 12px 12px 0 rgba(255, 255, 255, 0.3);
-    font-weight: 900;
-    animation: mangaShake 0.5s infinite;
-}
-
-@keyframes mangaShake {
-    0%, 100% { transform: translate(0, 0); }
-    25% { transform: translate(2px, 2px); }
-    75% { transform: translate(-2px, -2px); }
 }
 
 .error-subtitle {
-    font-size: 3.5em;
+    font-size: 2.5em;
     color: #fff;
     margin: 10px 0;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-
-.ghost-text {
-    color: #ffffff;
-    font-weight: 900;
-    position: relative;
-    display: inline-block;
-    -webkit-text-stroke: 1px #ffffff;
 }
 
 .error-message {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #aaa;
     margin: 0 0 20px 0;
-    font-weight: 300;
-    letter-spacing: 2px;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-/* Tablet Styles */
+.error-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5em;
-    }
-    
-    h2 {
-        font-size: 2em;
-    }
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.8em; }
     
     .packages-grid {
         grid-template-columns: 1fr;
     }
     
-    .package-header h3 {
-        font-size: 2em;
-    }
-    
-    .current {
-        font-size: 1.8em;
-    }
-    
     nav ul {
         flex-direction: column;
-        gap: 15px;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    
-    .error-code {
-        font-size: 6em;
-    }
-    
-    .error-subtitle {
-        font-size: 2.5em;
-    }
-}
-
-/* Mobile Styles */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2em;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
-    
-    .container {
-        padding: 15px;
-    }
-    
-    .package-card {
-        padding: 20px;
-    }
-    
-    .package-header h3 {
-        font-size: 1.8em;
-    }
-    
-    .current {
-        font-size: 1.5em;
-    }
-    
-    .custom-quote {
-        padding: 20px;
-    }
-    
-    .custom-quote h3 {
-        font-size: 1.5em;
-    }
-    
-    .social-links a {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 1.2em;
-        margin: 0 5px;
+        gap: 10px;
     }
     
     .error-code {
@@ -657,9 +406,22 @@ footer {
     .error-subtitle {
         font-size: 2em;
     }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
     
-    .error-message {
-        font-size: 1.5em;
+    .container {
+        padding: 15px;
+    }
+    
+    .package-card {
+        padding: 20px;
+    }
+    
+    .error-code {
+        font-size: 3em;
     }
     
     .error-actions {
@@ -672,30 +434,12 @@ footer {
 }
 
 /* ===== UTILITY CLASSES ===== */
-.text-center {
-    text-align: center;
-}
+.text-center { text-align: center; }
+.hidden { display: none; }
 
-.hidden {
-    display: none;
-}
-
-/* Manga sound effect style */
-.sound-effect {
-    font-weight: 900;
-    font-size: 2em;
-    color: #ffffff;
-    text-transform: uppercase;
-    margin: 10px 0;
-}
-
-/* ===== FUTURE FEATURES PLACEHOLDERS ===== */
-.builder-tool {
+/* ===== FUTURE FEATURES ===== */
+.builder-tool, .comparison-table {
     /* Coming soon */
 }
 
-.comparison-table {
-    /* Coming soon */
-}
-
-/* ========== END OF STYLESHEET ========== */
+/* ========== END ========== */
