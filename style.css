@@ -708,7 +708,6 @@ header h1:hover::before {
     color: #ffffff;
     font-size: 1.3em;
     font-weight: 500;
-    border-left: 3px solid #ffffff;
     padding-left: 20px;
     text-align: center;
     margin-top: 30px;
