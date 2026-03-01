@@ -528,6 +528,45 @@ footer {
     }
 }
 
+/* ===== CSS-ONLY EMBLEM ===== */
+header h1 {
+    position: relative;
+    display: inline-block;
+    padding-left: 70px; /* Make space for the emblem */
+}
+
+header h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url('emblem.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%);
+    transition: transform 0.2s ease;
+}
+
+header h1:hover::before {
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    header h1 {
+        padding-left: 50px;
+    }
+    
+    header h1::before {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 /* ===== UTILITY CLASSES ===== */
 .text-center { text-align: center; }
 .hidden { display: none; }
