@@ -662,6 +662,106 @@ header h1:hover::before {
     }
 }
 
+/* ===== PROMO SECTION  ===== */
+.promo-section {
+    background: #0a0a0a;
+    border: 1px solid #333;
+    padding: 60px 40px;
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255,255,255,0.05);
+}
+
+.promo-title {
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 5px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.promo-subtitle {
+    font-size: 2em;
+    color: #aaaaaa;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.promo-text {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.promo-text p {
+    margin-bottom: 20px;
+    color: #cccccc;
+    font-size: 1.1em;
+}
+
+.promo-highlight {
+    color: #ffffff;
+    font-size: 1.3em;
+    font-weight: 500;
+    border-left: 3px solid #ffffff;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.promo-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.promo-btn {
+    min-width: 200px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .promo-section {
+        padding: 40px 20px;
+    }
+    
+    .promo-title {
+        font-size: 2.5em;
+    }
+    
+    .promo-subtitle {
+        font-size: 1.5em;
+    }
+    
+    .promo-text p {
+        font-size: 1em;
+    }
+    
+    .promo-highlight {
+        font-size: 1.1em;
+    }
+}
+
 /* ===== UTILITY CLASSES ===== */
 .text-center { text-align: center; }
 .hidden { display: none; }
