@@ -2,7 +2,7 @@
 bottom line is the first in order..
 yeh yeh me dum dum making a documentation for simple summer project whatever move on please..
 
-#8.50pm 1/3
+# 8.50pm 1/3
 
 watermark is gonna be the end of me [nooooooo]..
 finish favicon/emblem [i swear i have to redo them 10 time this week]
